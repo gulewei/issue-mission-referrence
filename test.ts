@@ -1,13 +1,13 @@
-import { inferOptions } from './inferOptions'
+import { inferOptions } from "./inferOptions";
 
 inferOptions({
-    data(){
+    data() {
         return {
-            time: 0 // `find all references` here will found all three results.
-        }
+            time: 0, // here output 3 results as expected
+        };
     },
-    created(){
+    created() {
         this.time = 123;
         console.log(this.time);
-    }
+    },
 });

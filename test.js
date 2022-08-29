@@ -1,13 +1,13 @@
-import { inferOptions } from './inferOptions'
+import { inferOptions } from "./inferOptions";
 
 inferOptions({
-    data(){
+    data() {
         return {
-            time: 0 // click `find all references` here will found 2 results, but actually there is 3 and line 10 is the missing one.
-        }
+            time: 0, // click `find all references` here output 2 results but expect 3.
+        };
     },
-    created(){
+    created() {
         this.time = 123;
         console.log(this.time);
-    }
+    },
 });
